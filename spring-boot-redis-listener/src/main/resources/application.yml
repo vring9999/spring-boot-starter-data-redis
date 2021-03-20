@@ -1,0 +1,18 @@
+server:
+  port: 8901
+  servlet:
+    context-path: /vring
+
+spring:
+  redis:
+    database: 0
+    host: 127.0.0.1
+    open: true # 是否开启redis缓存
+    lettuce:
+      pool:
+        max-active: 500   #最大连接数据库连接数,设 0 为没有限制
+        max-idle: 100     #最大等待连接中的数量,设 0 为没有限制
+        max-wait: 3000  #最大建立连接等待时间。如果超过此时间将接到异常。设为-1表示无限制。
+        min-idle: 50     #最小等待连接中的数量,设 0 为没有限制
+    password: ''
+    port: 6379
